@@ -1,0 +1,149 @@
+#include <stdio.h>
+ 
+int main() {
+    // duas cartas, para carta, o usauario devera fornecer informações:
+    int carta;
+
+    char pais[50] = "brasil";
+    char estado[20] = "são paulo";
+    char cidade[20] = "são paulo";
+    double população=46.289333;
+    float area=248.222;
+    float PIB=3.9000000;
+    int pontosturisticos=10;
+
+    // para carta2, o usauario devera fornecer informações:
+
+    char pais2[50] = "espanha";
+    char estado2[50] = "madrid";
+    char cidade2[50] = "catalunya";
+    double população2=1.621384;
+    float area2=101.930;
+    float pib2=4.5000000;
+    int pontosturisticos2=15;
+    
+    // para carta3, o usauario devera fornecer informações:
+
+    char pais3[50] = "Argentina";
+    char estado3[50] = "Buenos Aires";
+    char cidade3[50] = "Córdoba";
+    double população3=45.7;
+    float area3=2.78;
+    float pib3=638.5;
+    int pontosturisticos3=4;
+
+    //agora, o programa devera imprimir as informações fornecidas pelo usuario, utilizando a função printf() e os seguintes formatos de impressão:
+
+    printf("escolha a carta que deseja imprimir, neste jogo existe 3 cartas sendo elas paises: \n");
+    scanf("%d", &carta);
+
+    if (carta == 1)
+    {
+        printf("\nCarta 1:\n");
+        printf("País: %s\n", pais);
+        printf("Estado: %s\n", estado);
+        printf("Cidade: %s\n", cidade);
+        printf("População: %.6f\n", população);
+        printf("Área: %.3f\n", area);
+        printf("PIB: %.7f\n", PIB);
+        printf("Pontos turísticos: %d\n", pontosturisticos);
+    }
+    else if (carta == 2)
+    {
+        printf("\nCarta 2:\n");
+        printf("País: %s\n", pais2);
+        printf("Estado: %s\n", estado2);
+        printf("Cidade: %s\n", cidade2);
+        printf("População: %.6f\n", população2);
+        printf("Área: %.3f\n", area2);
+        printf("PIB: %.7f\n", pib2);
+        printf("Pontos turísticos: %d\n", pontosturisticos2);
+    }
+    else if (carta == 3)    
+    {
+        printf("\nCarta 3:\n");
+        printf("País: %s\n", pais3);
+        printf("Estado: %s\n", estado3);
+        printf("Cidade: %s\n", cidade3);
+        printf("População: %.6f\n", população3);
+        printf("Área: %.3f\n", area3);
+        printf("PIB: %.7f\n", pib3);
+        printf("Pontos turísticos: %d\n", pontosturisticos3);
+    }
+    else
+    {
+        printf("Carta inválida.\n");
+    }
+
+    // comparando as cartas, o programa devera comparar as informações fornecidas pelo usuário e imprimir qual carta tem a maior população, área, PIB e pontos turísticos, utilizando as seguintes mensagens de comparação:
+    //população 
+
+   printf("\n=================================\n");
+    printf("      SUPER TRUNFO PAISES\n");
+    printf("=================================\n");
+    printf("RESULTADO DAS COMPARACOES\n");
+    printf("---------------------------------\n");
+
+// População
+    if (população > população2 && população > população3)
+{
+    printf("Populacao -> Brasil venceu\n");
+}
+else if (população2 > população3)
+{
+    printf("Populacao -> Espanha venceu\n");
+}
+else
+{
+    printf("Populacao -> Argentina venceu\n");
+}
+
+// Área
+if (area > area2 && area > area3)
+{
+    printf("Area -> Brasil venceu\n");
+}
+else if (area2 > area3)
+{
+    printf("Area -> Espanha venceu\n");
+}
+else
+{
+    printf("Area -> Argentina venceu\n");
+}
+
+// PIB
+if (PIB > pib2 && PIB > pib3)
+{
+    printf("PIB -> Brasil venceu\n");
+}
+else if (pib2 > pib3)
+{
+    printf("PIB -> Espanha venceu\n");
+}
+else
+{
+    printf("PIB -> Argentina venceu\n");
+}
+
+// Pontos turísticos
+if (pontosturisticos > pontosturisticos2 &&
+    pontosturisticos > pontosturisticos3)
+{
+    printf("Pontos Turisticos -> Brasil venceu\n");
+}
+else if (pontosturisticos2 > pontosturisticos3)
+{
+    printf("Pontos Turisticos -> Espanha venceu\n");
+}
+else
+{
+    printf("Pontos Turisticos -> Argentina venceu\n");
+}
+
+    printf("---------------------------------\n");
+    printf("Fim do jogo!\n");
+    printf("=================================\n");
+
+    return 0;
+}
